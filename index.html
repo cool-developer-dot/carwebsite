@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VinRecord - Professional Vehicle History Reports. Get detailed vehicle information with our certified VIN lookup service.">
+    <meta name="keywords" content="VIN lookup, vehicle history, car report, NMVTIS, vehicle information">
+    <meta name="author" content="VinRecord">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="VinRecord - Professional Vehicle History Reports">
+    <meta property="og:description" content="Get detailed vehicle information with our certified VIN lookup service.">
+    <meta property="og:type" content="website">
+    
+    <!-- Title -->
+    <title>VinRecord - Professional Vehicle History Reports | VIN Lookup Service</title>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <!-- ========================================
+         HEADER SECTION
+    ========================================= -->
+    <header class="header" role="banner">
+        <div class="header__container">
+            <!-- Logo Section -->
+            <div class="header__logo">
+                <div class="logo">
+                    <span class="logo__letter logo__letter--v" aria-label="V">V</span>
+                    <div class="logo__text">
+                        <span class="logo__main-text" aria-label="THEVINRECORD">THEVINRECORD</span>
+                        <span class="logo__sub-text" aria-label="CAR REPORT">CAR REPORT</span>
+                    </div>
+                    <span class="logo__letter logo__letter--d" aria-label="D">D</span>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="header__navigation" role="navigation" aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="#home" class="nav-link nav-link--active" data-section="home" aria-current="page">Home</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#how-to" class="nav-link" data-section="how-to">How To</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#why-us" class="nav-link" data-section="why-us">Why Us</a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="#faq" class="nav-link" data-section="faq">FAQ</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="header__cta">
+                <button class="btn btn--primary btn--header" id="header-report-btn" aria-label="Get vehicle report">
+                    GET REPORT
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========================================
+         HERO SECTION
+    ========================================= -->
+    <section class="hero" id="home" role="main" aria-labelledby="hero-title">
+        <div class="hero__background">
+            <div class="hero__overlay" aria-hidden="true"></div>
+        </div>
+        
+        <div class="hero__content">
+            <div class="hero__text">
+                <h1 class="hero__title" id="hero-title">
+                    <span class="hero__title-line">LEARN THE STORY OF YOUR</span>
+                    <span class="hero__title-line">FUTURE OR CURRENT CAR</span>
+                </h1>
+                <p class="hero__subtitle">
+                    Know Before You Go Complete Vehicle History at Your Fingertips.
+                </p>
+            </div>
+            
+            <div class="hero__actions">
+                <button class="btn btn--primary btn--hero" id="hero-report-btn" aria-label="Get vehicle report">
+                    Get Report
+                </button>
+                <button class="btn btn--secondary btn--hero" id="learn-more-btn" aria-label="Learn more about our service">
+                    Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         VIN INPUT SECTION
+    ========================================= -->
+    <section class="vin-section" id="how-to" aria-labelledby="vin-title">
+        <div class="vin-section__decorative-header" aria-hidden="true"></div>
+        
+        <div class="vin-section__content">
+            <h2 class="vin-section__title" id="vin-title">LETS KNOW ABOUT YOUR VEHICLE!</h2>
+            <p class="vin-section__instruction">
+                Please enter Your 17 digit vehicle identification no. (VIN).
+            </p>
+            
+            <form class="vin-form" id="vin-form" novalidate>
+                <div class="vin-form__input-group">
+                    <label for="vin-input" class="visually-hidden">Vehicle Identification Number</label>
+                    <input 
+                        type="text" 
+                        id="vin-input"
+                        class="vin-form__input" 
+                        placeholder="Enter your 17-digit VIN"
+                        maxlength="17"
+                        pattern="[A-HJ-NPR-Z0-9]{17}"
+                        aria-describedby="vin-help"
+                        required
+                    >
+                    <div id="vin-help" class="visually-hidden">
+                        Enter a 17-character Vehicle Identification Number. Only letters and numbers are allowed, excluding I, O, and Q.
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn btn--primary btn--vin" id="vin-submit-btn">
+                    Get Report
+                </button>
+                
+                <p class="vin-form__terms">
+                    By continuing you agree to our 
+                    <a href="#" class="link link--terms" id="privacy-policy-link">Terms & Conditions</a>
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========================================
+         PROCESS SECTION
+    ========================================= -->
+    <section class="process-section" id="why-us" aria-labelledby="process-title">
+        <div class="process-section__container">
+            <!-- Certification Header -->
+            <div class="certification-header">
+                <p class="certification-header__text">
+                    VinRecord is certified by US Department of Justice and<br>NMVTIS
+                </p>
+                <div class="certification-header__logos">
+                    <div class="certification-logo certification-logo--nmvtis">
+                        <div class="nmvtis-logo">
+                            <div class="nmvtis-logo__swoosh" aria-hidden="true">
+                                <div class="swoosh-line"></div>
+                                <div class="swoosh-line"></div>
+                                <div class="swoosh-line"></div>
+                            </div>
+                            <div class="nmvtis-logo__content">
+                                <div class="nmvtis-logo__text">NMVTIS</div>
+                                <div class="nmvtis-logo__subtitle">National Motor Vehicle Title Information System</div>
+                            </div>
+                            <div class="nmvtis-logo__usa-outline" aria-hidden="true"></div>
+                        </div>
+                    </div>
+                    <div class="certification-logo certification-logo--doj">
+                        <div class="doj-logo">
+                            <div class="doj-logo__eagle" aria-hidden="true">
+                                <div class="eagle-body"></div>
+                                <div class="eagle-wings"></div>
+                                <div class="eagle-head"></div>
+                            </div>
+                            <div class="doj-logo__text">
+                                <div class="doj-logo__top">DEPARTMENT OF JUSTICE</div>
+                                <div class="doj-logo__bottom">OFFICE OF JUSTICE PROGRAMS</div>
+                            </div>
+                            <div class="doj-logo__latin">QUI PRO DOMINA JUSTITIA SEQUITUR</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="process-section__content">
+                <h2 class="process-section__title" id="process-title">KNOWING YOUR VEHICLE IS EASIER!</h2>
+                <p class="process-section__subtitle">
+                    Getting your vehicle history is now easier then ever before.
+                </p>
+
+                <!-- Three Step Process -->
+                <div class="steps-container">
+                    <!-- Step 1 -->
+                    <div class="step-card">
+                        <div class="step-card__icon" aria-hidden="true">
+                            <div class="triangle-up"></div>
+                        </div>
+                        <h3 class="step-card__title">1. Begin with Finding Your Car</h3>
+                        <p class="step-card__description">
+                            Search by vehicle identification number (VIN) or US license plate to find the car you want to research.
+                        </p>
+                    </div>
+
+                    <!-- Arrow 1 -->
+                    <div class="step-arrow" aria-hidden="true">
+                        <div class="arrow-right"></div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="step-card">
+                        <div class="step-card__icon" aria-hidden="true">
+                            <div class="payment-icon">💳</div>
+                        </div>
+                        <h3 class="step-card__title">2. Then make a Quick Payment</h3>
+                        <p class="step-card__description">
+                            Now complete your purchase easily through our secure and user-friendly checkout system.
+                        </p>
+                    </div>
+
+                    <!-- Arrow 2 -->
+                    <div class="step-arrow" aria-hidden="true">
+                        <div class="arrow-right"></div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="step-card">
+                        <div class="step-card__icon" aria-hidden="true">
+                            <div class="download-icon">📥</div>
+                        </div>
+                        <h3 class="step-card__title">3. Thats All Download Report</h3>
+                        <p class="step-card__description">
+                            Once the payment is made our system will automatically send you the Report on your Email in a few minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Demo Button -->
+                <div class="demo-button-container">
+                    <button class="btn btn--primary btn--demo" id="demo-report-btn" aria-label="Download demo report">
+                        Download Demo Report
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         GUARANTEE SECTION
+    ========================================= -->
+    <section class="guarantee-section" aria-labelledby="guarantee-title">
+        <div class="guarantee-section__container">
+            <h2 class="guarantee-section__title" id="guarantee-title">
+                VinRecord is now offering a 
+                <span class="highlight-text">48-Hour</span> 
+                money-back guarantee.
+            </h2>
+            
+            <div class="hands-illustration" aria-hidden="true">
+                <div class="hand hand--left">
+                    <div class="hand__outline"></div>
+                    <div class="hand__fingers"></div>
+                </div>
+                
+                <div class="money-stack">
+                    <div class="dollar-bill bill-1" aria-hidden="true">$</div>
+                    <div class="dollar-bill bill-2" aria-hidden="true">$</div>
+                    <div class="dollar-bill bill-3" aria-hidden="true">$</div>
+                    <div class="dollar-bill bill-4" aria-hidden="true">$</div>
+                    <div class="dollar-bill bill-5" aria-hidden="true">$</div>
+                </div>
+                
+                <div class="hand hand--right">
+                    <div class="hand__outline"></div>
+                    <div class="hand__fingers"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         WHY LEADING SECTION
+    ========================================= -->
+    <section class="why-leading-section" aria-labelledby="why-leading-title">
+        <div class="why-leading-section__container">
+            <h2 class="why-leading-section__title" id="why-leading-title">HERE IS WHY VINRECORD IS LEADING!</h2>
+            <p class="why-leading-section__subtitle">
+                Our experts brings you the most detailed and up-to-date used car information.
+            </p>
+            
+            <div class="benefits-container">
+                <!-- Left Benefits -->
+                <div class="benefits benefits--left">
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">🏆</div>
+                        <div class="benefit-item__text">Information You Can Trust</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">🕐</div>
+                        <div class="benefit-item__text">Full History</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">📄</div>
+                        <div class="benefit-item__text">Millions Of Records</div>
+                    </div>
+                </div>
+                
+                <!-- Center Truck -->
+                <div class="truck-container" aria-hidden="true">
+                    <div class="ford-raptor">
+                        <div class="truck-body">
+                            <div class="truck-cab">
+                                <div class="truck-windshield"></div>
+                                <div class="truck-door"></div>
+                            </div>
+                            <div class="truck-bed"></div>
+                        </div>
+                        <div class="truck-grille">
+                            <div class="ford-logo">FORD</div>
+                        </div>
+                        <div class="truck-headlights">
+                            <div class="headlight headlight--left"></div>
+                            <div class="headlight headlight--right"></div>
+                        </div>
+                        <div class="truck-wheels">
+                            <div class="wheel wheel--front-left"></div>
+                            <div class="wheel wheel--front-right"></div>
+                            <div class="wheel wheel--rear-left"></div>
+                            <div class="wheel wheel--rear-right"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Benefits -->
+                <div class="benefits benefits--right">
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">💰</div>
+                        <div class="benefit-item__text">Reduce the Risk of unexcpected cost</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">📈</div>
+                        <div class="benefit-item__text">Simplify Car Evaluation Process</div>
+                    </div>
+                    <div class="benefit-item">
+                        <div class="benefit-item__icon" aria-hidden="true">💲</div>
+                        <div class="benefit-item__text">Make your Sale Faster</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FAQ SECTION
+    ========================================= -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="faq-section__container">
+            <h2 class="faq-section__title" id="faq-title">FREQUENTLY ASKED QUESTIONS</h2>
+            <p class="faq-section__subtitle">Here are a few questions that our customers ask</p>
+            
+            <div class="faq-section__content">
+                <!-- Left Car Image -->
+                <div class="car-image car-image--left" aria-hidden="true">
+                    <div class="car-silhouette car-silhouette--left">
+                        <div class="car-grille">
+                            <div class="grille-slats"></div>
+                            <div class="car-emblem"></div>
+                        </div>
+                        <div class="car-headlights car-headlights--left">
+                            <div class="headlight headlight--left"></div>
+                            <div class="headlight headlight--right"></div>
+                        </div>
+                        <div class="car-bumper">
+                            <div class="license-plate"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Items -->
+                <div class="faq-items" role="region" aria-labelledby="faq-title">
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-1">
+                            <span>What is a VIN</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-1">
+                            <p>A Vehicle Identification Number (VIN) is a unique 17-character code assigned to every vehicle. It serves as the vehicle's fingerprint and contains information about the manufacturer, model, year, and other specifications.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-2">
+                            <span>Where do you find the VIN?</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-2">
+                            <p>The VIN can be found in several locations: on the driver's side dashboard visible through the windshield, on the driver's side door frame, on the vehicle registration, insurance card, or title documents.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-3">
+                            <span>Where does the Vehicle History Report information come from?</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-3">
+                            <p>Our vehicle history reports are compiled from multiple reliable sources including state DMVs, insurance companies, auto auctions, service centers, and other official databases to provide comprehensive vehicle information.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-4">
+                            <span>What types of vehicles can I run a Vehicle History Report on?</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-4">
+                            <p>You can run vehicle history reports on cars, trucks, motorcycles, RVs, and other motor vehicles that have a valid 17-character VIN. This includes vehicles from 1981 to present.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-5">
+                            <span>Who operates and manage NMVTIS?</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-5">
+                            <p>NMVTIS (National Motor Vehicle Title Information System) is operated by the U.S. Department of Justice and managed by the Bureau of Justice Assistance to help prevent fraud and protect consumers.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-item__question" role="button" tabindex="0" aria-expanded="false" aria-controls="faq-answer-6">
+                            <span>How much does it cost for Vehicle History Report?</span>
+                            <div class="faq-item__arrow" aria-hidden="true">▶</div>
+                        </div>
+                        <div class="faq-item__answer" id="faq-answer-6">
+                            <p>Our vehicle history reports start at $9.99 for basic information, with premium reports available for $19.99. We also offer package deals for multiple reports. All reports come with our 48-hour money-back guarantee.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Car Image -->
+                <div class="car-image car-image--right" aria-hidden="true">
+                    <div class="car-silhouette car-silhouette--right">
+                        <div class="car-grille">
+                            <div class="grille-slats"></div>
+                            <div class="car-emblem"></div>
+                        </div>
+                        <div class="car-headlights car-headlights--right">
+                            <div class="headlight headlight--left"></div>
+                            <div class="headlight headlight--right"></div>
+                        </div>
+                        <div class="car-bumper">
+                            <div class="license-plate"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER SECTION
+    ========================================= -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__container">
+            <div class="footer__content">
+                <!-- Left Column: Quick Links -->
+                <div class="footer__column footer__column--links">
+                    <h3 class="footer__title">Quick Links</h3>
+                    <nav class="footer__nav" aria-label="Footer navigation">
+                        <ul class="footer__links">
+                            <li class="footer__link-item">
+                                <a href="#home" class="footer__link" data-section="home">Home</a>
+                            </li>
+                            <li class="footer__link-item">
+                                <a href="#how-to" class="footer__link" data-section="how-to">How To</a>
+                            </li>
+                            <li class="footer__link-item">
+                                <a href="#why-us" class="footer__link" data-section="why-us">Why Us</a>
+                            </li>
+                            <li class="footer__link-item">
+                                <a href="#faq" class="footer__link" data-section="faq">FAQ</a>
+                            </li>
+                            <li class="footer__link-item">
+                                <a href="#how-to" class="footer__link" data-section="how-to">Get Report</a>
+                            </li>
+                            <li class="footer__link-item">
+                                <a href="#" class="footer__link" id="privacy-policy-link">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <!-- Center Column: Logo -->
+                <div class="footer__column footer__column--logo">
+                    <div class="footer__logo">
+                        <div class="footer-logo">
+                            <span class="footer-logo__letter footer-logo__letter--v" aria-label="V">V</span>
+                            <div class="footer-logo__text">
+                                <span class="footer-logo__main-text" aria-label="THEVINRECORD">THEVINRECORD</span>
+                                <span class="footer-logo__sub-text" aria-label="CAR REPORT">CAR REPORT</span>
+                            </div>
+                            <span class="footer-logo__letter footer-logo__letter--d" aria-label="D">D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact -->
+                <div class="footer__column footer__column--contact">
+                    <h3 class="footer__title">Contact</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-item__icon" aria-hidden="true">✉</div>
+                            <a href="mailto:info@thevinrecord.com" class="contact-item__text contact-item__link">
+                                info@thevinrecord.com
+                            </a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item__icon" aria-hidden="true">📍</div>
+                            <a href="https://maps.google.com/?q=1901+8th+Avenue+Tuscaloosa+AL+35401" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="contact-item__text contact-item__link">
+                                1901 8th Avenue Tuscaloosa, AL 35401
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Methods -->
+                    <div class="payment-methods" aria-label="Accepted payment methods">
+                        <button class="payment-logo payment-logo--visa" aria-label="Visa payment method">VISA</button>
+                        <button class="payment-logo payment-logo--mastercard" aria-label="MasterCard payment method">MC</button>
+                        <button class="payment-logo payment-logo--discover" aria-label="Discover payment method">DISCOVER</button>
+                        <button class="payment-logo payment-logo--amex" aria-label="American Express payment method">AMEX</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>Copyright © 2024, Thevinrecord Europe GmbH</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         UTILITY CLASSES
+    ========================================= -->
+    <div class="visually-hidden" aria-hidden="true">
+        <!-- Screen reader only content -->
+    </div>
+</body>
+</html>
